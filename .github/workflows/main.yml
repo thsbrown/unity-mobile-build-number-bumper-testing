@@ -1,10 +1,6 @@
 name: Bump Number
 
-on:
-  workflow_dispatch:
-    inputs:
-      bump-number:
-        description: 'Bump Number'
+on: workflow_dispatch
 
 jobs:
   hello_world_job:
