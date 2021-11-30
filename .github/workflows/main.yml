@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: Breakstep-Studios/unity-mobile-build-number-bumper
+        uses: Breakstep-Studios/unity-mobile-build-number-bumper@v1
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
