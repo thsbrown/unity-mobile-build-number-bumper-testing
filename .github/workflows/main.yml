@@ -13,3 +13,10 @@ jobs:
           fetch-depth: 0
       - name: Unity Mobile Build Bumper
         uses: Breakstep-Studios/unity-mobile-build-number-bumper@docker
+      - name: "Add, Commit And Push Prepared Files"
+        run: |
+          git config --global user.email "releasebot@users.noreply.github.com"
+          git config --local user.name "release bot"
+          git add -A
+          git commit -m "Updated bundle versions"
+          git push
