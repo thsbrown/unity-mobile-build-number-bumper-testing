@@ -8,8 +8,8 @@ jobs:
     name: A job to test unity-mobile-build-number-bumper
     steps:
       - name: "Checkout"
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
       - name: Unity Mobile Build Bumper
-        uses: Breakstep-Studios/unity-mobile-build-number-bumper@v1
+        uses: Breakstep-Studios/unity-mobile-build-number-bumper@main
