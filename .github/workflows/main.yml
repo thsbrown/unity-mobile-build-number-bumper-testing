@@ -1,0 +1,19 @@
+name: Bump Number
+
+on:
+  workflow_dispatch:
+    inputs:
+      bump-number:
+        description: 'Bump Number'
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to test unity-mobile-build-number-bumper
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: Breakstep-Studios/unity-mobile-build-number-bumper
+      # Use the output from the `hello` step
+      - name: Get the output time
+        run: echo "The time was ${{ steps.hello.outputs.time }}"
