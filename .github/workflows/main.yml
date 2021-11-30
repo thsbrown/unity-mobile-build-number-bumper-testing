@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test unity-mobile-build-number-bumper
     steps:
-      - name: Hello world action step
-        id: hello
+      - name: "Checkout"
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Unity Mobile Build Bumper
         uses: Breakstep-Studios/unity-mobile-build-number-bumper@v1
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
