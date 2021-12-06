@@ -13,6 +13,7 @@ jobs:
           fetch-depth: 0
           ref: bundle-version-updates
       - name: Unity Mobile Build Bumper
+        id: unity-mobile-build-bumper
         uses: Breakstep-Studios/unity-mobile-build-number-bumper@docker
       - name: "Add, Commit And Push Prepared Files"
         run: |
@@ -22,3 +23,7 @@ jobs:
           git add -A
           git commit -m "Updated bundle versions"
           git push
+      - name: "output numbers"
+        run: |
+        echo "iOS new build number is: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number }}"
+        echo "Android new build number is: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number }}"
