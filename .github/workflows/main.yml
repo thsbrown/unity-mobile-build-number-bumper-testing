@@ -23,7 +23,7 @@ jobs:
           git add -A
           git commit -m "Updated bundle versions"
           git push
-      - name: "output numbers"
+      - name: "Output numbers"
         run: |
-          echo iOS new build number is: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number }}
-          echo Android new build number is: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number }}
+          echo iOS build number: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-after }}
+          echo Android build number: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-after }}
