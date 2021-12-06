@@ -1,18 +1,18 @@
-name: Bump Number
+name: Unity Build Number Bumper
 
 on: workflow_dispatch
 
 jobs:
-  hello_world_job:
+  unity-bump-number-job:
     runs-on: ubuntu-latest
-    name: A job to test unity-mobile-build-number-bumper
+    name: "A job to test unity-mobile-build-number-bumper"
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-          ref: bundle-version-updates
-      - name: Unity Mobile Build Bumper
+        ref: bundle-version-updates
+      - name: "Unity Mobile Build Bumper"
         id: unity-mobile-build-bumper
         uses: Breakstep-Studios/unity-mobile-build-number-bumper@composite
       - name: "Add, Commit And Push Prepared Files"
@@ -23,7 +23,7 @@ jobs:
           git add -A
           git commit -m "Updated bundle versions"
           git push
-      - name: "Output numbers"
+      - name: "Output Numbers"
         run: |
-          iOS build number: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-after }}
-          Android build number: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-after }}
+          echo iOS build number: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-after }}
+          echo Android build number: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-after }}
