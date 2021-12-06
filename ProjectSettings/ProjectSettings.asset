@@ -153,10 +153,10 @@ PlayerSettings:
     iPhone: com.breakstepstudios.commandcenterearth
   buildNumber:
     Standalone: 0
-    iPhone: 27
+    iPhone: 28
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
-  AndroidBundleVersionCode: 27
+  AndroidBundleVersionCode: 28
   AndroidMinSdkVersion: 19
   AndroidTargetSdkVersion: 29
   AndroidPreferredInstallLocation: 1
