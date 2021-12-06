@@ -18,7 +18,7 @@ jobs:
         run: |
           git config --global user.email "releasebot@users.noreply.github.com"
           git config --local user.name "release bot"
-          git checkout -b bundle-version-updates
+          git checkout bundle-version-updates
           git add -A
           git commit -m "Updated bundle versions"
           git push
