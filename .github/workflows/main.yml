@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-        ref: bundle-version-updates
+          ref: bundle-version-updates
       - name: "Unity Mobile Build Bumper"
         id: unity-mobile-build-bumper
         uses: Breakstep-Studios/unity-mobile-build-number-bumper@composite
