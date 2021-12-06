@@ -25,5 +25,5 @@ jobs:
           git push
       - name: "Output numbers"
         run: |
-          echo iOS build number: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-after }}
-          echo Android build number: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-after }}
+          iOS build number: ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.ios-build-number-after }}
+          Android build number: ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-before }} -> ${{ steps.unity-mobile-build-bumper.outputs.android-build-number-after }}
